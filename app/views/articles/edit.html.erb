@@ -1,3 +1,14 @@
 <h1>Editing Article</h1>
 <%= render "form", article: @article %>
 <%= link_to "Show", article_path(@article) %> | <%= link_to "Back", articles_path %>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://pagecdn.io/lib/ace/1.4.12/ace.min.js" crossorigin="anonymous" integrity="sha256-T5QdmsCQO5z8tBAXMrCZ4f3RX8wVdiA0Fu17FGnU1vU=" ></script>
+<script>
+  var editor = ace.edit("article-content");
+  var textarea = $('textarea[name="article[content]"]').hide();
+  editor.getSession().setValue(textarea.val());
+  editor.getSession().on('change', function () {
+    textarea.val(editor.getSession().getValue());
+  });
+</script>

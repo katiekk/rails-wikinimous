@@ -48,4 +48,17 @@ body {
   abbr{
     display: none;
   }
+
+  #article-content{
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #FDF6E3;
+    color: #586E75;
+    .ace_gutter-layer{
+      background-color: #FAF1D3;
+    }
+    .ace_gutter-active-line.ace_gutter-cell {
+      background-color: #EDE4C1;
+    }
+  }
 }

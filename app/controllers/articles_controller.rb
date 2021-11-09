@@ -25,7 +25,8 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
-    redirect_to articles_path, flash: { notice: 'Article was successfully destroyed.' }
+    flash[:alert] = 'Article was successfully destroyed.'
+    redirect_to articles_path
   end
 
   private

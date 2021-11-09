@@ -1,5 +1,6 @@
 <%= simple_form_for(article) do |f| %>
   <%= f.input :title %>
-  <%= f.input :content%>
+  <%= f.input :content %>
+  <div id="article-content" class="form-control ace_editor ace-solarized-light"></div>
   <%= f.submit article.new_record? ? 'Create Article' : 'Update Article', class:"btn btn-default" %>
 <% end %>

@@ -4,4 +4,4 @@
   <%= link_to article_path(@article), method: :delete, data: { confirm: "Are you sure?" } do %><i class="far fa-trash-alt"></i><% end %>
 </h2>
 <hr>
-<%= @article.content %>
+<%= @article.content.html_safe %>
