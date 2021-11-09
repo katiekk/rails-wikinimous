@@ -1,0 +1,12 @@
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info fade in">
+    <button class="close" data-dismiss="alert">×</button>
+    <<%= msg %>>
+  </div>
+<% end %>
+<% @articles.each do |article| %>
+  <article>
+    <h2><%= link_to article.title, article_path(article) %></h2>
+    <p><%= article.content %></p>
+  </article>
+<% end %>
